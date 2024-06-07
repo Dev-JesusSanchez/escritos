@@ -6,6 +6,7 @@
     --blueClaro: #22e;
     --shadow-claro: 0px 0px 5px 1px #ddd;
     --nav:  rgba(255, 255, 255, 0.5);
+    --input: #aaa;
 }
 
 /* GENERAL */
@@ -87,12 +88,13 @@ body {
 .section-home__option p {
     color: var(--negro);
     margin-top: 1rem;
-} 
+}
 
 /* ESCRITOS */
 
 .nav-writer {
     display: flex;
+    align-items: center;
     background-color: var(--nav);
     padding: 0.5rem 1rem;
     margin: auto;
@@ -105,6 +107,18 @@ body {
 
 .nav-writer__list__item {
     list-style: none;
+}
+
+.nav-writer__input {
+    transform: translateX(14px);
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--input);
+    color: var(--negro);
+    z-index: 10;
+    display: none;
 }
 
 .nav-writer__list__item__enlace {
@@ -122,6 +136,61 @@ body {
     border: none;
     color: var(--negro);
     background-color: transparent;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* CONTENIDOS DEL ESCRITO */
+
+.nav2-sections {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.nav2-sections.hidden {
+    display: none;
+}
+
+.escritos-contenido {
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: var(--claro);
+    box-shadow: var(--shadow-claro);
+    max-width: 15rem;
+    text-align: center;
+}
+
+.escritos-contenido__portada {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-claro);
+    margin-bottom: 1rem;
+}
+
+.escritos-contenido__text {
+    text-align: left;
+}
+
+.content_actions {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+}
+
+.content_actions a, .content_actions button {
+    color: var(--claro);
+    background-color: var(--negro);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.content_actions button {
+    border: none;
     cursor: pointer;
 }
 
@@ -159,6 +228,19 @@ body {
 .footer__msg:hover {
     opacity: 0.7;
     transition: opacity 500ms ease;
+}
+
+/* ------ ABOUT ME -------- */
+.ex-left {
+    padding: 1rem;
+    box-shadow: var(--shadow-claro);
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: var(--claro);
+    color: var(--negro);
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
 }
 
 /* ESTILOS A CLASES GENERALES */
